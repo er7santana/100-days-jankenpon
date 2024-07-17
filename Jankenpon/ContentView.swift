@@ -49,12 +49,12 @@ enum PlayOption {
 struct ContentView: View {
     
     let options = [PlayOption.paper, .rock, .scissors]
-    @State var currentOption = Int.random(in: 0..<3)
-    @State var shouldWin = Bool.random()
-    @State var currentScore = 0
-    @State var isShowingResultAlert = false
-    @State var alertTitle = ""
-    @State var questionsAnswered = 0
+    @State private var currentOption = Int.random(in: 0..<3)
+    @State private var shouldWin = Bool.random()
+    @State private var currentScore = 0
+    @State private var isShowingResultAlert = false
+    @State private var alertTitle = ""
+    @State private var questionsAnswered = 0
     
     var body: some View {
         NavigationStack {
